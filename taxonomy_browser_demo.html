@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>VF Taxonomy Browser</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" />
+
+    <!-- CSS Files -->
+    <link type="text/css" href="css/taxonomy_browser_demo.css" rel="stylesheet" />
+    <link type="text/css" href="tbrowser_assets/tbrowser.css" rel="stylesheet" />
+
+    <link type="text/css" href="css/jquery_skins/black-tie/jquery-ui-1.8.13.custom.css" rel="stylesheet" />
+
+    <!--[if IE]><script language="javascript" type="text/javascript" src="inc/excanvas.js"></script><![endif]-->
+
+    <!-- Base Library File -->
+    <script language="javascript" type="text/javascript" src="inc/jquery.min.js"></script>
+    <script language="javascript" type="text/javascript" src="inc/jquery-ui.min.js"></script>
+    <script language="javascript" type="text/javascript" src="inc/raphael-min.js"></script>
+    <script language="javascript" type="text/javascript" src="inc/naba_utils.js"></script>
+    <script language="javascript" type="text/javascript" src="inc/jquery.scrollTo.min.js"></script>
+    <script language="javascript" src="inc/json2.js"></script>
+
+    <!-- TB Scripts -->
+    <script language="javascript" type="text/javascript" src="tbrowser_assets/TBrowser.js"></script>
+    <script language="javascript" type="text/javascript" src="inc/taxonomy_browser_demo.js"></script>
+</head>
+
+<body onload="init();">
+<div id="mainContent">
+    <h1>Taxonomy Browser Demo</h1>
+    <form id="searchForm" onsubmit="return false;"><input id="searchField"/></form>
+    <div id="browserContainer"></div>
+    <p>Lorem ipsum dolor sit amet, porttitor turpis sequi vulputate. Dapibus quis donec quam suscipit sed interdum, libero mauris illum faucibus, mattis montes viverra ultrices at, porta sed ligula libero. Hac libero a sed ad cursus semper. Porttitor rutrum, quam nisl pharetra, suspendisse eget interdum, est condimentum eget vivamus primis. Leo tempor facilisis vel, venenatis amet dapibus, voluptatem vel ut metus.</p>
+</div>
+<div id="cloudContainer"/>
+
+<script type="text/javascript">
+    $(function()
+    {
+       var  testTextBox = $('#searchField');
+        var code =null;
+        testTextBox.keypress(function(e)
+        {
+            code= (e.keyCode ? e.keyCode : e.which);
+            if (code == 13) {
+                var s = $(this).val();
+
+                if (s.length>2 || s.length==0) {
+                    window.tb1.search(s);
+                }
+
+
+                e.preventDefault();
+            }
+        });
+
+    });
+
+</script>
+
+</body>
+</html>

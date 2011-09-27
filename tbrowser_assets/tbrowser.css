@@ -1,0 +1,237 @@
+.TBrowser {
+    width:auto; height: auto;
+    white-space: nowrap;
+    min-height: 100px;
+    position: absolute;
+    z-index: 20;
+}
+
+.TBColumn {
+    border-right: 1px dotted #ccc;
+    imin-height: 100px;
+    height: auto;
+    width: auto;
+    display: inline-block;
+    margin: 0px;
+    overflow: hidden;
+    vertical-align: top;
+}
+
+.TBColumn:hover {
+/*    border-right: 1px dotted #999;*/
+}
+
+.FoldTag {
+    background-image: url(fold_tag_on.png);
+    background-position: top right;
+    background-repeat: no-repeat;
+/*    background-color: #feffe4;*/
+    border-right:1px solid #ffba00;
+}
+
+.UnFoldTagOn {
+    background-image: url(unfold_tag_on.png);
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+
+.UnFoldTagOff {
+    background-image: url(unfold_tag_off.png);
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+
+.PanelHolder {
+    width: auto;
+    height: auto;
+    margin: 15px 0px 15px 0px;
+    padding: 0px;
+}
+
+.TBNode {
+    height: 15px;
+    cursor: pointer;
+    padding: 0px 16px 0px 3px;
+    background-color: white;
+    border: 1px solid white;
+}
+
+.Expanded {
+    background-image: url(collapse_off.png);
+    background-position: center right;
+    background-repeat: no-repeat;    
+}
+
+.Expanded.Marked {
+    background-image: url(collapse_off_marked.png);
+}
+
+.Expanded:hover {
+    background-image: url(collapse_on.png);
+}
+
+.Expandible{
+    background-image: url(expand_off.png);
+    background-position: center right;
+    background-repeat: no-repeat;    
+}
+
+.Expandible.Marked, .Expandible.ComeToDiscover{
+    background-image: url(expand_off_marked.png);
+}
+.Expandible:hover, .Expandible.ComeToDiscover:hover {
+    background-image: url(expand_on.png);
+}
+
+.Expanded.Marked, .Expanded.ComeToDiscover{
+    background-image: url(collapse_off_marked.png);
+}
+.Expanded:hover, .Expanded.ComeToDiscover:hover {
+    background-image: url(collapse_on.png);
+}
+
+
+.Marked{
+    background-color: #fae9c8;
+/*    background-color: #d7e6f1;*/
+}
+
+.TBNode .Hits {
+    padding-left: 4px;
+    color:#0055ff;
+    display: inline-block;
+}
+
+.TBNode .ConnectorPort {
+    background-image: url(connector_port_parent.png);
+    background-position: top center;
+    background-repeat: no-repeat;
+    width: 6px;
+    height: 8px;
+    position: relative;
+    display: none;
+}
+
+.TBNodeLabel{
+    display: inline-block;
+    line-height: 11px;
+    padding: 2px 0px 3px 7px;
+    border: 0px;
+}
+
+.Marked .TBNodeLabel, .ComeToDiscover .TBNodeLabel{
+    color:#0055ff;
+}
+
+.Marked .TBNodeLabel:hover, .ComeToDiscover .TBNodeLabel:hover {
+/*    border: 1px solid #ff0060;*/
+    color: #ff0060;
+}
+
+.Marked .TBNodeLabel{
+    background-image: url(to_discover_off.png);
+    background-position: 0px 3px;
+    background-repeat: no-repeat;      
+}
+
+.Marked .TBNodeLabel:hover {
+    background-image: url(to_discover_on.png);
+    background-position: 0px 3px;
+}
+
+
+.TBNode:hover, .PaperContainer:hover {
+    color: #ff0060;
+}
+
+.TBPanel {
+    padding: 0px 10px;
+    margin-bottom: 15px;
+}
+
+.TBrowser {
+    font-size: 11px;
+}
+
+.FolderButton {
+    cursor: w-resize;
+    display: absolute;
+    float: right;
+    width: 8px;
+    height: 100%;
+}
+
+.FolderButton:hover {
+/*    background-color: #ffba00;*/
+}
+
+.TBPanelLabel {
+    font-weight: bold;
+    margin-bottom: 3px;
+    text-transform: uppercase;
+}
+
+.PleaseWait {
+    background-color: white;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    background-image: url(PleaseWait.gif);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.TBNode.InActivePath {
+    border: 1px dotted #999;
+}
+
+.TBNode.Active {
+    border: 1px solid #999;
+}
+
+.TBNode.InSelectedPath {
+/*    border: 1px solid black;*/
+    border: 1px dotted #ff0066;
+/*    color: white;*/
+}
+
+.TBNode.Selected {
+/*    border: 1px solid black;*/
+    border: 1px solid #ff0066;
+/*    color: white;*/
+}
+
+
+
+/*.TBNode.Active:hover {
+    color: #ff0060;    
+}
+
+.Active.TBNode .Hits {
+    color:white;
+}
+
+
+.Active.Marked .TBNodeLabel, .Active.ComeToDiscover .TBNodeLabel {
+    color: white;
+}
+
+.Active.Marked .TBNodeLabel:hover, .Active.ComeToDiscover .TBNodeLabel:hover {
+    color: #ff0060;
+}*/
+
+.TBNodeLabel:hover * {
+    color: #ff0060;
+}
+
+
+
+
+.PaperContainer {
+    position: absolute;
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    z-index: 5;
+    display: block;
+ }
